@@ -29,7 +29,7 @@ header("Location:showPw.php");
     <form>
 
       <div class="form-group row">
-        <label for="password-length" class="col-5 col-form-label">Specifica da quanti caratteri deve essere formata la tua password</label>
+        <label for="password-length" class="col-5 col-form-label">Lunghezza Password :</label>
         <div class="col-7 ">
           <input type="number" class="form-control" id="password-length" name="password-lenght" value="<?php echo isset($_GET["password-lenght"]) ? $_GET["password-lenght"] : "" ?>">
         </div>
@@ -68,17 +68,16 @@ header("Location:showPw.php");
         <div class="col-sm-2">ripetizioni:</div>
         <div class="col-sm-10">
           <div class="form-check">
-            <!-- non riesco!!!! -->
             <input class="form-check-input" type="radio" id="repeat-true" name="repeat" value="1" <?php echo $repeatChars ? "checked" : "" ?>>
             <label class="form-check-label" for="repeat-true">
-              permesse
+              si
             </label>
           </div>
 
           <div class="form-check">
             <input class="form-check-input" type="radio" id="repeat-false" name="repeat" value="0" <?php echo !$repeatChars ? "checked" : "" ?>>
             <label class="form-check-label" for="repeat-false">
-              negate
+              no
             </label>
           </div>
         </div>
